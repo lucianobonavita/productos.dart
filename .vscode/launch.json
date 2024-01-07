@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Dart: Run",
+        "request": "launch",
+        "type": "dart",
+        "program": "C:/Users/Usuario/OneDrive/Escritorio/dart/productos/productos_dart/main.dart",
+        "args": [],
+        "cwd": "C:/Users/Usuario/OneDrive/Escritorio/dart/productos",
+        "console": "terminal"
+      }
+    ]
+  }

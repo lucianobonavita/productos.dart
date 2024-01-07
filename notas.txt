@@ -1,0 +1,130 @@
+PROYECTO PRODUCTOS
+
+En este proyecto armé un administrador de productos.
+Donde podes dar el alta del producto, junto con su precio, agregandolos a una lista
+donde se almacenan cada producto con su respectivo precio.
+
+CLASE PRODUCT:
+
+primero cree la clase product el cual va a tener dos valores, un name y el price, las cuales
+son final ya que una vez establecido su valor no vamos a poder cambiarlo.
+instanciamos estos valores en un constructor con los parametros this.name y this.product.
+
+esta clase va a tener dos metodos
+
+addStock: toma una cantidad como parámetro y la agrega al stock actual del producto. 
+
+removeStock: también toma una cantidad como parámetro y la resta del stock actual del producto. 
+pero verifica primero si hay suficiente stock antes de restar la cantidad.
+
+
+PRODUCTSERVICE:
+
+luego cree la clase productService en la cual creamos el listado de los productos
+ubicandolos en una lista privada _products la cual se inicializa en 0.
+
+y ademas cree el getProducts() el cual va a traer los productos almacenados en la lista
+cuando lo llamemos desde el main.
+
+cree un addProduct del tipo void, ya que no devuelve ningun valor,
+en el cual se va a agregar un producto y su precio cuando lo agreguemos desde el main.
+
+cree un metodo para remover los productos agregados a la lista llamado
+removeProductById, para eliminar un producto unicamente por el id.
+Si no lo encuentra, lanza un error con un mensaje indicando que no se encontró ningún producto con ese ID.
+
+luego cree el metodo addStockToProduct el cual obtiene un producto por su ID y agrega la cantidad especificada al stock del producto.
+
+y por ultimo el removeStockFromProduct hace lo mismo pero resta la cantidad del stock del producto,
+verificando primero si hay suficiente stock.
+
+En resumen, se define una clase Product para representar productos
+y una clase ProductService para gestionar una lista de productos y realizar operaciones como agregar y eliminar productos, 
+así como agregar y eliminar stock de productos específicos.
+
+MAIN:
+
+en el main importé el dart:io para la escritura y lectura desde la consola para probar
+el programa, y obviamente importé las clases hacia el main.
+
+en el main creo la variable productService y la instancio a la clase productService
+
+luego cree un whil para hacer un bucle infinito que solo terminará cuando se llame a "return"
+
+en pantalla se imprimen 4 opciones para:
+
+ver los productos y su precio
+agregar productos y su precio
+eliminar productos por su id
+y salir del programa
+
+luego con ayuda del stdout.write de la biblioteca dart:io
+le pedimos al usuario que seleccione una de las 4 opciones
+(si el numero no corresponde a nignuna opcion mostrará que el valor no es valido)
+y la informacion que ponga el usuario se almacena en la variable
+option creada posteriormente transformandola en int con el int.parse()
+
+luego ingresamos a un switch donde va a evaluar la opcion que elegimos y mostrar en 
+pantalla la que corresponda.
+
+El programa utiliza un bloque try-catch para manejar posibles excepciones que puedan ocurrir al ejecutar las acciones del usuario. 
+Si se produce una excepción, se imprime un mensaje de error.
+
+dentro del try se utiliza un switch con diferentes opciones para que el usuario elija
+
+CASE 1:
+
+si option = 1, se obtienen los productos y se muestran en pantalla el nombre y su precio
+
+CASE 2:
+si option = 2, se le pide al usuario que ingrese el nombre y luego el precio
+del producto a agregar, y la linea:
+var id = productService.getProducts().length + 1; genera un id unico para cada producto.
+
+CASE 3:
+
+
+
+CASE 4:
+
+si option = 3 se le solicita al usuario que ingrese el id que quiera eliminar
+
+en el producToRemove le creo unos valores predeterminados por que al dejarlo en null, 
+me daba un error por el null safety que posee dart
+
+cree un if en el cual pregunta si el producto a remover por su id no es igual a 0,
+o sea que se encuentran productos con id mayor a 0 en nuestra lista.
+por lo tanto va a traer el nombre, precio y id del producto seleccionado.
+
+y luego muestra un cartel en pantalla donde muestra el id, nombre y precio del 
+producto eliminado.
+
+y si el usuario llegara a ingresar un id el cual nunca fue establecido
+da un cartel de aviso que no hay ningun producto con ese id.
+ 
+CASE 6:
+
+en el case 6 lo unico que hace es salir del programa si esa fue la opcion
+elegida por el usuario mostrando un cartel en pantalla donde se despide del usuario.
+
+DEFAULT:
+
+si el usuario no ingresa ninguno de los valores que hay en las opciones 
+la consola imprime un cartel de 'opcion no valida'.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
